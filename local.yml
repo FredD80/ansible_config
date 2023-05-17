@@ -1,15 +1,15 @@
 ---
 
-- Hosts: localhost
-  connection: local
-  become: true
+-  hosts: localhost
+   connection: local
+   become: true
   
-  pre_tasks:
-    - name: update repositories
-      package:
-        update_cache: yes
-      changed_when: False
+   pre_tasks:
+     - name: update repositories
+       package:
+         update_cache: yes
+       changed_when: False
 
-
-  tasks:
-    - include: tasks/packages.yml
+  
+   tasks:
+     - include: tasks/packages.yml
